@@ -476,3 +476,44 @@ Traceback (most recent call last):
     all_schema = self.config.all_schema.keys()
                  ^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'DataIngestionConfig' object has no attribute 'all_schema'
+[2023-10-22 15:33:20,902: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-22 15:33:20,904: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-22 15:33:20,904: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-22 15:33:20,905: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-22 15:33:20,905: INFO: common: created directory at : artifacts]
+[2023-10-22 15:33:20,905: INFO: common: created directory at : artifacts/data_ingestion]
+[2023-10-22 15:33:20,907: ERROR: main: 'DataIngestionConfig' object has no attribute 'all_schema']
+Traceback (most recent call last):
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/main.py", line 20, in <module>
+    data_ingestion.main()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/pipeline/stage_02_data_validation.py", line 15, in main
+    data_validation.validate_all_columns()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/components/data_validation.py", line 33, in validate_all_columns
+    raise e
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/components/data_validation.py", line 17, in validate_all_columns
+    all_schema = self.config.all_schema.keys()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataIngestionConfig' object has no attribute 'all_schema'
+[2023-10-22 15:45:50,727: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-22 15:45:50,728: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-22 15:45:50,729: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-22 15:45:50,729: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-22 15:45:50,730: INFO: common: created directory at : artifacts]
+[2023-10-22 15:45:50,730: INFO: common: created directory at : artifacts/data_ingestion]
+[2023-10-22 15:45:50,733: ERROR: main: 'DataIngestionConfig' object has no attribute 'all_schema']
+Traceback (most recent call last):
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/main.py", line 20, in <module>
+    data_ingestion.main()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/pipeline/stage_02_data_validation.py", line 15, in main
+    data_validation.validate_all_columns()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/components/data_validation.py", line 34, in validate_all_columns
+    raise e
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/components/data_validation.py", line 18, in validate_all_columns
+    all_schema = self.config.all_schema.keys()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataIngestionConfig' object has no attribute 'all_schema'
+[2023-10-22 15:46:12,554: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-22 15:46:12,556: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-22 15:46:12,558: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-22 15:46:12,560: INFO: common: created directory at : artifacts]
+[2023-10-22 15:46:12,564: INFO: common: created directory at : artifacts/data_validation]
