@@ -371,3 +371,108 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1351, in do_open
     raise URLError(err)
 urllib.error.URLError: <urlopen error [Errno 60] Operation timed out>
+[2023-10-22 11:21:32,929: INFO: main: >>>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2023-10-22 11:21:32,931: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-22 11:21:32,932: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-22 11:21:32,932: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-22 11:21:32,933: INFO: common: created directory at : artifacts]
+[2023-10-22 11:21:32,933: INFO: common: created directory at : artifacts/data_ingestion]
+[2023-10-22 11:24:03,380: ERROR: main: <urlopen error [Errno 60] Operation timed out>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1041, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 979, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1451, in connect
+    super().connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 945, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 836, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/pipeline/stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/components/data_ingestion.py", line 15, in download_file
+    filename,headers=requests.urlretrieve(
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 557, in error
+    result = self._call_chain(*args)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 749, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 60] Operation timed out>
+[2023-10-22 12:33:58,738: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-22 12:33:58,740: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-22 12:33:58,741: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-22 12:33:58,742: INFO: common: created directory at : artifacts]
+[2023-10-22 12:33:58,742: INFO: common: created directory at : artifacts/data_validation]
+[2023-10-22 12:34:15,888: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-22 12:34:15,889: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-22 12:34:15,890: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-22 12:34:15,891: INFO: common: created directory at : artifacts]
+[2023-10-22 12:34:15,892: INFO: common: created directory at : artifacts/data_validation]
+[2023-10-22 15:25:50,764: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-22 15:25:50,765: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-22 15:25:50,766: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-22 15:25:50,766: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-22 15:25:50,766: INFO: common: created directory at : artifacts]
+[2023-10-22 15:25:50,766: INFO: common: created directory at : artifacts/data_ingestion]
+[2023-10-22 15:25:50,770: ERROR: main: 'DataIngestionConfig' object has no attribute 'all_schema']
+Traceback (most recent call last):
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/main.py", line 20, in <module>
+    data_ingestion.main()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/pipeline/stage_02_data_validation.py", line 15, in main
+    data_validation.validate_all_columns()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/components/data_validation.py", line 33, in validate_all_columns
+    raise e
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/components/data_validation.py", line 17, in validate_all_columns
+    all_schema = self.config.all_schema.keys()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataIngestionConfig' object has no attribute 'all_schema'

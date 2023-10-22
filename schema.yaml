@@ -15,4 +15,7 @@ COLUMNS:
 
 TARGET_COLUMN:
   name: quality
+
+#columns and there data types
+
   
