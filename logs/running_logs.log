@@ -574,3 +574,40 @@ x==========x]
 [2023-10-23 11:01:00,099: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<<<
 
 ]
+[2023-10-23 12:41:37,701: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-23 12:41:37,710: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-23 12:41:37,718: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-23 12:41:37,722: INFO: common: created directory at : artifacts]
+[2023-10-23 12:43:42,088: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-23 12:43:42,090: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-23 12:43:42,092: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-23 12:43:42,093: INFO: common: created directory at : artifacts]
+[2023-10-23 12:45:58,654: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-23 12:45:58,655: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-23 12:45:58,657: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-23 12:45:58,658: INFO: common: created directory at : artifacts]
+[2023-10-23 12:45:58,659: INFO: common: created directory at : artifacts/model_evaluation]
+[2023-10-23 12:47:57,260: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-23 12:47:57,261: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-23 12:47:57,263: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-23 12:47:57,264: INFO: common: created directory at : artifacts]
+[2023-10-23 12:47:57,264: INFO: common: created directory at : artifacts/model_evaluation]
+[2023-10-23 12:51:21,515: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-23 12:51:21,516: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-23 12:51:21,519: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-23 12:51:21,519: INFO: common: created directory at : artifacts]
+[2023-10-23 12:51:21,520: INFO: common: created directory at : artifacts/model_evaluation]
+[2023-10-23 13:07:52,877: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2023-10-23 13:07:52,878: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-10-23 13:07:52,879: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-23 13:07:52,879: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-10-23 13:07:52,880: INFO: common: created directory at : artifacts]
+[2023-10-23 13:07:52,880: INFO: common: created directory at : artifacts/model_evaluation]
+[2023-10-23 13:07:52,880: ERROR: main: 'module' object is not callable]
+Traceback (most recent call last):
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/main.py", line 54, in <module>
+    data_ingestion.main()
+  File "/Users/sameerraj/Desktop/Machine_learning_python/End-to-End-ML-red-wine-prediction-project/src/mlproject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config = model_evaluation(config=model_evaluation_config)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
